@@ -32,16 +32,16 @@ var socket = io("https://socket-max-hole.glitch.me/");
 
 //
 socket.on('connect', () => {
-  Max.post("thew socket connectedd"); // true
- socket.emit("maxask", "can i have stuff?");
+  Max.post("the socket is connected"); // true
+ 	socket.emit("maxjoin", "hello");
 });
 //
-socket.on('answer', (data)=>{
+socket.on('your_id_is', (data)=>{
 
-  Max.post(data)
+  Max.post('your socket id is '+ data)
 })
 //
-socket.on('data', (index, data)=>{
+socket.on('from_maxhole', (index, data)=>{
 	//Max.setDict('data', data);
 
 	Max.outlet('data', data, index);
@@ -49,18 +49,25 @@ socket.on('data', (index, data)=>{
 })
 //
 //
-socket.on('numOkeys', (numOkeys)=>{
-	//Max.setDict('data', data);
 
-	Max.outlet('keys', numOkeys);
 
-})
+
+
+
 //
 //
 socket.on('error', (error) => {
   Max.post(error)
 });
-//
+////////MAX STUFF
+
+Max.addHandler('emit', (msg) => {
+Max.post('emitting '+ msg);
+  socket.emit('to_maxhole',msg);
+});
+
+
+
 Max.addHandler("bang", () => {
-  socket.emit('hey',"there");
+  Max.post("hey there");
 });
