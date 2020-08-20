@@ -16,6 +16,9 @@ Max.addHandler("echo", (msg) => {
 
 
 
+
+
+
 const io = require('socket.io-client');
 
 
@@ -61,13 +64,29 @@ socket.on('error', (error) => {
 });
 ////////MAX STUFF
 
-Max.addHandler('emit', (msg) => {
-Max.post('emitting '+ msg);
-  socket.emit('to_maxhole',msg);
+Max.addHandler('emit', () => {
+
+	Max.getDict("sock")
+				.then((dict) => {
+					sock = dict;
+					Max.post('emitting '+ sock.data);
+					socket.emit('to_maxhole',sock.data); ///add broadcast specifics here?
+				})
+				.catch((err) => {
+					Max.post(err);
+				});
+
 });
+
+
+///Dict
+  var sock = Max.getDict("sock");
+
+
+
 
 
 
 Max.addHandler("bang", () => {
-  Max.post("hey there");
+  Max.post(sock);
 });
