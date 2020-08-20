@@ -44,7 +44,7 @@ socket.on('your_id_is', (data)=>{
 socket.on('from_maxhole', (index, data)=>{
 	//Max.setDict('data', data);
 
-	Max.outlet('data', data, index);
+	Max.outlet('data', data);
 
 })
 //
