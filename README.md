@@ -1,6 +1,6 @@
-# README
+# [SOCKET] README
 
-Socket is a socket for MAX/MSP. Any socket object can get or send data to or from any other socket object anywhere in the world. Pretty neat!
+Socket is a socket for MAX/MSP. Any `socket` object can get or send data to or from any other socket object anywhere in the world. Pretty neat!
 
 ### Installation
 
@@ -12,7 +12,7 @@ Then quit and restart Max and create a `socket` object.  You can send numbers, l
 
 ### Best Practices
 
-Given that all sockets on earth talk to each other, it is probably wise to prepend any messages with a "destination" and route for that destination on the other side. See the routing tab in the help file for examples. 
+Given that all sockets on earth talk to each other, it is probably wise to prepend any messages with a "destination" and route for that destination on the other side. See the routing tab in the help file for examples.
 
 Eventually it would be nice to implement a room feature to avoid this practice, but I ain't gettin paid for this yet. 🤷
 
