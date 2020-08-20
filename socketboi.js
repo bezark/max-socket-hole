@@ -3,7 +3,7 @@ const Max = require('max-api');
 
 // This will be printed directly to the Max console
 Max.post(`Loaded the ${path.basename(__filename)} script`);
-
+Max.outlet("hownoisy")
 // Use the 'addHandler' function to register a function for a particular message
 
 // Use the 'outlet' function to send messages out of node.script's outlet
@@ -15,7 +15,10 @@ Max.addHandler("echo", (msg) => {
 
 
 
-
+var noiz = 0;
+Max.addHandler("noisy", (val) => {
+	noiz = val;
+});
 
 
 
@@ -35,13 +38,13 @@ var socket = io("https://socket-max-hole.glitch.me/");
 
 //
 socket.on('connect', () => {
-  Max.post("the socket is connected"); // true
+  if(noiz){Max.post("the socket is connected"); }// true
  	socket.emit("maxjoin", "hello");
 });
 //
 socket.on('your_id_is', (data)=>{
 
-  Max.post('your socket id is '+ data)
+  if(noiz){Max.post('your socket id is '+ data)}
 })
 //
 socket.on('from_maxhole', (index, data)=>{
@@ -60,7 +63,7 @@ socket.on('from_maxhole', (index, data)=>{
 //
 //
 socket.on('error', (error) => {
-  Max.post(error)
+  if(noiz)Max.post(error)
 });
 ////////MAX STUFF
 
@@ -69,11 +72,11 @@ Max.addHandler('emit', () => {
 	Max.getDict("sock")
 				.then((dict) => {
 					sock = dict;
-					Max.post('emitting '+ sock.data);
+					 if(noiz){Max.post('emitting '+ sock.data);}
 					socket.emit('to_maxhole',sock.data); ///add broadcast specifics here?
 				})
 				.catch((err) => {
-					Max.post(err);
+					 if(noiz) Max.post(err);
 				});
 
 });
