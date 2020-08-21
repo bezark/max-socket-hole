@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1530.0, 571.0, 1372.0, 787.0 ],
+		"rect" : [ 105.0, 158.0, 1372.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,19 @@
 		"showontab" : 0,
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 236.100001454353333, 105.200002133846283, 241.0, 60.0 ],
+					"presentation_linecount" : 6,
+					"text" : "[dict sock] is not local in scope! make dict private somehow... unnamed and then pass to node with bang? can node scripts accept dicts?"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-18",
 					"maxclass" : "newobj",
@@ -248,6 +261,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 1,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -382,7 +397,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "socketboi.js",
-				"bootpath" : "~/OneDrive/Documents/Max 8/Library/max-socket-hole",
+				"bootpath" : "~/Documents/Max 8/Library/max-socket-hole",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
