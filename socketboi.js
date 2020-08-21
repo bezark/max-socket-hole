@@ -20,7 +20,7 @@ Max.addHandler("noisy", (val) => {
 	noiz = val;
 });
 
-
+var room = 'wholemaxhole';
 
 const io = require('socket.io-client');
 
@@ -40,6 +40,8 @@ var socket = io("https://socket-max-hole.glitch.me/");
 socket.on('connect', () => {
   if(noiz){Max.post("the socket is connected"); }// true
  	socket.emit("maxjoin", "hello");
+	socket.emit("joinRoom", room);
+
 });
 //
 socket.on('your_id_is', (data)=>{
@@ -81,6 +83,15 @@ Max.addHandler('emit', () => {
 
 });
 
+
+
+Max.addHandler("room", (newroom) => {
+	socket.emit("leaveRoom", room);
+	if(noiz) Max.post('leaving '+ room);
+  	room = newroom;
+	socket.emit("joinRoom", room);
+	if(noiz) Max.post('joining '+ room);
+});
 
 ///Dict
   var sock = Max.getDict("sock");
