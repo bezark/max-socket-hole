@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 874.0, 479.0, 857.0, 480.0 ],
+		"rect" : [ 35.0, 85.0, 832.0, 585.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -57,7 +57,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 857.0, 454.0 ],
+						"rect" : [ 35.0, 111.0, 832.0, 559.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -323,7 +323,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 874.0, 505.0, 857.0, 454.0 ],
+						"rect" : [ 0.0, 26.0, 832.0, 559.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -354,24 +354,98 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-11",
-									"linecount" : 7,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 71.0, 33.0, 364.0, 103.0 ],
-									"text" : "Given that all sockets on earth talk to each other, it is probably wise to prepend any messages with a \"destination\" and route for that destination on the other side. See the routing tab in the help file for examples.\n\nEventually it would be nice to implement a room feature to avoid this practice, but I ain't gettin paid for this yet."
+									"id" : "obj-19",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 121.0, 220.0, 87.0, 22.0 ],
+									"presentation_linecount" : 2,
+									"text" : "room johntown"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-9",
+									"id" : "obj-18",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 435.0, 249.0, 362.0, 20.0 ],
-									"text" : "(Not really, but at least this helps you find what you want...)"
+									"patching_rect" : [ 411.0, 139.0, 298.0, 20.0 ],
+									"text" : " Set the room to johntown to get messages"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-15",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 318.0, 431.0, 91.0, 22.0 ],
+									"text" : "print @popup 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-14",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 318.0, 385.0, 135.0, 22.0 ],
+									"text" : "socket @room bobtown"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-13",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 27.0, 60.0, 150.0, 48.0 ],
+									"text" : "You and me both!  Use the @room attribute to specify who gets what!"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 318.0, 139.0, 87.0, 22.0 ],
+									"presentation_linecount" : 2,
+									"text" : "room johntown"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 121.0, 189.0, 85.0, 22.0 ],
+									"text" : "room bobtown"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontface" : 1,
+									"fontsize" : 18.0,
+									"id" : "obj-11",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 27.0, 19.0, 249.0, 27.0 ],
+									"text" : "Tired of all the riff-raff??"
 								}
 
 							}
@@ -381,7 +455,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 318.0, 246.0, 91.0, 22.0 ],
+									"patching_rect" : [ 318.0, 270.0, 91.0, 22.0 ],
 									"text" : "print @popup 1"
 								}
 
@@ -400,36 +474,12 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-4",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 318.0, 214.0, 75.0, 22.0 ],
-									"text" : "route toJohn"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 71.0, 182.0, 92.0, 22.0 ],
-									"text" : "prepend toJohn"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-3",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 318.0, 182.0, 43.0, 22.0 ],
+									"patching_rect" : [ 318.0, 200.0, 43.0, 22.0 ],
 									"text" : "socket"
 								}
 
@@ -441,44 +491,58 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 71.0, 214.0, 43.0, 22.0 ],
-									"text" : "socket"
+									"patching_rect" : [ 71.0, 270.0, 137.0, 22.0 ],
+									"text" : "socket @room johntown"
 								}
 
 							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
-									"source" : [ "obj-1", 0 ]
+									"destination" : [ "obj-3", 0 ],
+									"source" : [ "obj-10", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
-									"source" : [ "obj-3", 0 ]
+									"destination" : [ "obj-15", 0 ],
+									"source" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-19", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-7", 0 ],
-									"source" : [ "obj-4", 0 ]
+									"source" : [ "obj-3", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
+									"destination" : [ "obj-2", 0 ],
 									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-8", 0 ]
 								}
 
 							}
  ]
 					}
 ,
-					"patching_rect" : [ 485.0, 392.0, 132.0, 22.0 ],
+					"patching_rect" : [ 485.0, 392.0, 57.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -486,7 +550,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p \"Destination Routing\""
+					"text" : "p Rooms"
 				}
 
 			}

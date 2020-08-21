@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 158.0, 1372.0, 787.0 ],
+		"rect" : [ 42.0, 790.0, 1210.0, 585.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,20 +46,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 809.0, 162.0, 140.0, 22.0 ],
-					"text" : "loadmess wholemaxhole"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-19",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 778.0, 226.0, 83.0, 22.0 ],
-					"text" : "prepend room"
+					"patching_rect" : [ 814.0, 138.0, 171.0, 22.0 ],
+					"text" : "loadmess room wholemaxhole"
 				}
 
 			}
@@ -89,35 +77,15 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-3",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "n4m.monitor.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 332.800004720687866, 421.0, 400.0, 220.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontface" : 0,
 					"fontsize" : 12.0,
 					"id" : "obj-9",
-					"linecount" : 15,
+					"linecount" : 14,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 750.0, 384.0, 240.0, 208.0 ],
-					"text" : "- rooms\n- url argument\n- documentaiton for cloning glitch server\n- dictionary support\n- a 'gimme money' print ?\n- a better method for handling noisval (the problem was node starting after object was initialized)\n- direct messaging ie to a person instead of to everyone\n\n-eventually write the whole shebang in c++\n\nhttps://github.com/socketio/socket.io-client-cpp"
+					"patching_rect" : [ 750.0, 384.0, 241.0, 200.0 ],
+					"text" : "- url argument\n- documentaiton for cloning glitch server\n- dictionary support\n- a 'gimme money' print ?\n- a better method for handling noisval (the problem was node starting after object was initialized)\n- direct messaging ie to a person instead of to everyone\n\n-eventually write the whole shebang in c++\n\nhttps://github.com/socketio/socket.io-client-cpp"
 				}
 
 			}
@@ -129,7 +97,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 750.0, 355.0, 293.0, 22.0 ],
+					"patching_rect" : [ 750.0, 355.0, 293.0, 23.0 ],
 					"text" : "Features I would like to add someday"
 				}
 
@@ -141,7 +109,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 236.100001454353333, 105.200002133846283, 244.0, 60.0 ],
+					"patching_rect" : [ 236.100001454353333, 105.200002133846283, 244.0, 62.0 ],
 					"text" : "[dict sock] is not local in scope! make dict private somehow... unnamed and then pass to node with bang? can node scripts accept dicts?"
 				}
 
@@ -213,7 +181,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 681.0, 162.0, 123.0, 22.0 ],
+					"patching_rect" : [ 681.0, 138.0, 123.0, 22.0 ],
 					"text" : "routepass noisy room"
 				}
 
@@ -225,7 +193,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 628.0, 111.266663670539856, 72.0, 22.0 ],
+					"patching_rect" : [ 628.0, 26.666663408279419, 72.0, 22.0 ],
 					"text" : "patcherargs"
 				}
 
@@ -276,17 +244,6 @@
 					"outlettype" : [ "emit", "" ],
 					"patching_rect" : [ 124.5, 143.200002133846283, 44.0, 22.0 ],
 					"text" : "t emit l"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-26",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 213.100001454353333, 176.200002610683441, 150.0, 20.0 ],
-					"text" : "could add room"
 				}
 
 			}
@@ -389,7 +346,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -431,22 +388,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-19", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-28", 0 ],
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-2", 1 ]
 				}
 
 			}
@@ -482,6 +425,16 @@
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"midpoints" : [ 263.5, 378.0, 666.0, 378.0, 666.0, 189.0, 690.5, 189.0 ],
+					"order" : 1,
+					"source" : [ "obj-28", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"midpoints" : [ 263.5, 339.0, 765.0, 339.0, 765.0, 189.0, 787.5, 189.0 ],
+					"order" : 0,
 					"source" : [ "obj-28", 1 ]
 				}
 
@@ -540,26 +493,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "socketboi.js",
-				"bootpath" : "~/Documents/Max 8/Library/max-socket-hole",
+				"bootpath" : "~/OneDrive/Documents/Max 8/Library/max-socket-hole",
 				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "n4m.monitor.maxpat",
-				"bootpath" : "C74:/packages/Node For Max/patchers/debug-monitor",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "resize_n4m_monitor_patcher.js",
-				"bootpath" : "C74:/packages/Node For Max/patchers/debug-monitor",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "fit_jweb_to_bounds.js",
-				"bootpath" : "C74:/packages/Node For Max/patchers/debug-monitor",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -586,9 +521,9 @@
 , 			{
 				"name" : "helpfile_label-1",
 				"default" : 				{
+					"textcolor" : [ 0.501961, 0.501961, 0.501961, 1.0 ],
 					"fontsize" : [ 13.0 ],
-					"fontname" : [ "Arial" ],
-					"textcolor" : [ 0.501961, 0.501961, 0.501961, 1.0 ]
+					"fontname" : [ "Arial" ]
 				}
 ,
 				"parentstyle" : "",

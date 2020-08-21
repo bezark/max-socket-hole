@@ -49,7 +49,7 @@ socket.on('your_id_is', (data)=>{
   if(noiz){Max.post('your socket id is '+ data)}
 })
 //
-socket.on('from_maxhole', (index, data)=>{
+socket.on('from_maxhole', (data)=>{
 	//Max.setDict('data', data);
 
 	Max.outlet('data', data);
@@ -75,7 +75,9 @@ Max.addHandler('emit', () => {
 				.then((dict) => {
 					sock = dict;
 					 if(noiz){Max.post('emitting '+ sock.data);}
-					socket.emit('to_maxhole',sock.data); ///add broadcast specifics here?
+					//socket.emit('to_maxhole',sock.data); ///add broadcast specifics here?
+					socket.emit('to_room', room, sock.data)
+					if(noiz){Max.post('emitting '+ sock.data+ "to "+room);}
 				})
 				.catch((err) => {
 					 if(noiz) Max.post(err);
