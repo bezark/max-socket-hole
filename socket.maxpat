@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 105.0, 158.0, 1372.0, 787.0 ],
+		"rect" : [ 34.0, 158.0, 1372.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -41,13 +41,40 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontface" : 0,
+					"fontsize" : 12.0,
+					"id" : "obj-9",
+					"linecount" : 15,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 750.0, 384.0, 237.0, 208.0 ],
+					"presentation_linecount" : 13,
+					"text" : "- rooms\n- url argument\n- documentaiton for cloning glitch server\n- dictionary support\n- a 'gimme money' print ?\n- a better method for handling noisval (the problem was node starting after object was initialized)\n- direct messaging ie to a person instead of to everyone\n\n-eventually write the whole shebang in c++\n\nhttps://github.com/socketio/socket.io-client-cpp"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 14.0,
+					"id" : "obj-5",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 750.0, 355.0, 293.0, 22.0 ],
+					"text" : "Features I would like to add someday"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-1",
 					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 236.100001454353333, 105.200002133846283, 241.0, 60.0 ],
-					"presentation_linecount" : 6,
+					"patching_rect" : [ 236.100001454353333, 105.200002133846283, 244.0, 60.0 ],
 					"text" : "[dict sock] is not local in scope! make dict private somehow... unnamed and then pass to node with bang? can node scripts accept dicts?"
 				}
 
@@ -261,8 +288,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 1,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
